@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:layout_marginBottom="25dp"
+        android:text="Temi"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etSpeak"
+        app:layout_constraintEnd_toEndOf="@+id/etSpeak"
+        app:layout_constraintStart_toStartOf="@+id/etSpeak" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSpeak"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="left|top"
+        android:hint="Type Here...."
+        android:paddingStart="3dp"
+        android:paddingTop="3dp"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSpeak"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="SPEAK"
+        android:onClick="speak"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/etSpeak"
+        app:layout_constraintTop_toBottomOf="@+id/etSpeak" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonClear"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="Clear"
+        android:onClick="Clear"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etSpeak"
+        app:layout_constraintTop_toTopOf="@+id/buttonSpeak" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
